@@ -5,11 +5,11 @@ import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("com.robohorse.robopojogenerator")
-public class Response{
+public class Playlist {
 
 	@SerializedName("count")
 	private int count;
 
 	@SerializedName("items")
-	private List<ItemsItem> items;
+	private List<MusicItem> items;
 }

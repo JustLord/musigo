@@ -11,12 +11,14 @@ import javax.inject.Inject;
 import javax.inject.Provider;
 
 import by.sfsas.music.R;
+import by.sfsas.music.di.Injector;
 import by.sfsas.music.features.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements MainView {
 
     @InjectPresenter
     MainPresenter presenter;
+
     @Inject
     Provider<MainPresenter> presenterProvider;
 
@@ -38,6 +40,6 @@ public class MainActivity extends BaseActivity implements MainView {
 
     @Override
     protected void injectComponent() {
-
+        Injector.getInstance().plusMainComponent().inject(this);
     }
 }
