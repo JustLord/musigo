@@ -7,5 +7,5 @@ import com.google.gson.annotations.SerializedName;
 public class ResponsePlaylist{
 
 	@SerializedName("response")
-	private Response response;
+	private Playlist playlist;
 }

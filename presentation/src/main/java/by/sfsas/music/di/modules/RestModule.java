@@ -1,7 +1,8 @@
 package by.sfsas.music.di.modules;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Singleton;
 
@@ -31,6 +32,15 @@ public interface RestModule {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(okHttpClient)
+                .build();
+    }
+
+    @Singleton
+    @Provides
+    static OkHttpClient provideOkHttpClient1() {
+        return new OkHttpClient.Builder()
+                .connectTimeout(25, TimeUnit.SECONDS)
+                .readTimeout(25, TimeUnit.SECONDS)
                 .build();
     }
 

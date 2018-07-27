@@ -2,6 +2,7 @@ package by.sfsas.domain.usescases;
 
 import javax.inject.Inject;
 
+import by.sfsas.domain.entity.Playlist;
 import by.sfsas.domain.repository.IRepository;
 
 public class GetPlaylistByOwnerUseCase {

@@ -37,9 +37,9 @@ public class AppModule {
         @Singleton
         PostExecutionThread providePostExecutionThread(UIThread uiThread);*/
 
-        @Binds
+        /*@Binds
         @Singleton
-        IRepository provideIRepository(Repository repository);
+        IRepository provideIRepository(Repository repository);*/
 
         /*@Binds
         @Singleton
