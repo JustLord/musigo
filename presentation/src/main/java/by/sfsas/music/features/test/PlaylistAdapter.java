@@ -12,6 +12,8 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 
+import by.sfsas.music.R;
+
 public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHolder > {
     //private ArrayList<Playlist> mPlaylsits;
 
