@@ -2,6 +2,7 @@ package by.sfsas.music.features.test;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -16,27 +17,24 @@ import com.bumptech.glide.load.MultiTransformation;
 
 import java.util.ArrayList;
 
+import by.sfsas.music.R;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.CropTransformation;
 
 import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 
-/**
- * Created by yarolegovich on 25.03.2017.
- */
-
 public class PlayerFragment extends Fragment {
     Bitmap bitmap = null;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_player, container, false);
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(TrackImageFragment.createFor(""));
         fragments.add(TrackImageFragment.createFor(""));

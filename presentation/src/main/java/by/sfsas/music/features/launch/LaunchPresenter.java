@@ -36,7 +36,6 @@ public class LaunchPresenter extends MvpPresenter<LaunchView> {
     }
 
     private void showNextActivity() {
-        //getViewState().startNextActivity(MainActivity.getActivityIntent(context));
-        getViewState().startNextActivity(by.sfsas.music.features.test.MainActivity.getActivityIntent(context));
+        getViewState().startNextActivity(MainActivity.getActivityIntent(context));
     }
 }
